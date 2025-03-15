@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: monospace;
+    background-color: #e2eaff;
+    color: #101632dd
+    /* background: rgba(0, 0, 0, 0.5) url('/imagenes/CORREGIDO_page-0001.jpg') no-repeat ;
+    background-size: cover; */
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    animation: desplasar both;
+    animation-timeline: scroll();
+    animation-range: 10px 100px;
+}
+
+@keyframes desplasar {
+    from{
+        background-color: #fff;
+    }
+
+    to{
+        padding: 0;
+        background-color: #0008;
+        color: #fff;
+    }
+    
+}
+
+@keyframes desplasar2 {
+    from{
+        color:fff
+    }
+
+    to{
+        color: #fff;
+    }
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    white-space: nowrap; /* Prevenir el desbordamiento del texto */
+    animation: desplasar2 both;
+    animation-timeline: scroll();
+    animation-range: 10px 100px;
+}
+
+.nav-links a.active {
+    color: #ff2e2e;
+}
+
+.nav-links a:hover {
+    background-color: #4d6a6f;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilos adaptables */
+@media (max-width: 820px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Añadir margen de 15px entre opciones */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+/* INICIO DE LAS PREGUNTAS RELACIONADO ALA SECCION DE TECHO PROPIO */
+
+.container {
+    width: 100%;
+    margin: 30px  auto;
+    /* background: #fff; */
+    padding: 20px;
+    /* box-shadow: 0 0 15px #0005; */
+    border-radius: 15px;
+    background-color: #beda;
+} 
+
+@media (min-width: 600px) {
+    .container{
+        width: 80%;
+    }
+}
+
+.container   p {
+    color: #000;
+    font-weight: bold;
+}
+.container li{
+    padding: 10px ;
+    color: #000;
+    font-weight: bold;
+
+}
+.container:hover{
+    box-shadow: 0 0 20px #0009;
+}
+.container a{
+    font-size: 20px;
+} 
+
+/* FIN DE LAS PREGUNTAS RELACINADAS ALA SECCION DE TECHO PROPIO */
+
+/*INICIO CUADRO DE PROYECTOS */
+
+.container1 {
+    max-width: 800px;
+    /* background-color: #fff; */
+    background-color: #beda;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 60px; /* Ajusta esto según la altura de tu barra de navegación */
+    padding: 20px;
+    text-align: center;
+    margin:15px auto;
+}
+.info-box h1 {
+    color: #13f;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.info-box h2 {
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    color: #555;
+    text-align: left;
+}
+
+.info-box ul li {
+    margin: 5px 0;
+}
+
+.video-container1 {
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+/* FIN DE CUADRO DE PROYECTO */
+/* inicio del foter */
+footer{
+    background-color: #6e6e6e;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+footer p{
+    color: #fff;
+    width: 70vw;
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    width: 50px;
+
+}
+
+  /* fin del footer */

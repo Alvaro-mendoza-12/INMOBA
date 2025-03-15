@@ -1,0 +1,254 @@
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: monospace;
+    background-color: #e2eaff;
+    color: #101632dd
+    /* background: rgba(0, 0, 0, 0.5) url('/imagenes/CORREGIDO_page-0001.jpg') no-repeat ;
+    background-size: cover; */
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    animation: desplasar both;
+    animation-timeline: scroll();
+    animation-range: 10px 100px;
+    z-index: 100;
+}
+
+@keyframes desplasar {
+    from{
+        background-color: #fff;
+    }
+
+    to{
+        padding: 0;
+        background-color: #0008;
+        color: #fff;
+    }
+    
+}
+
+@keyframes desplasar2 {
+    from{
+        color:fff
+    }
+
+    to{
+        color: #fff;
+    }
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    white-space: nowrap; /* Prevenir el desbordamiento del texto */
+    animation: desplasar2 both;
+    animation-timeline: scroll();
+    animation-range: 10px 100px;
+}
+
+.nav-links a.active {
+    color: #ff2e2e;
+}
+
+.nav-links a:hover {
+    background-color: #4d6a6f;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilos adaptables */
+@media (max-width: 820px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Añadir margen de 15px entre opciones */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+/* FIN DE NAVEGACION */
+
+/* ESTILO DE LOTES Y CONDIMINIOS */
+.container {
+    max-width: 800px;
+    background-color: #beda;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 60px; /* Ajusta esto según la altura de tu barra de navegación */
+    padding: 20px;
+    text-align: center;
+    margin:15px auto;
+}
+.info-box h1 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #3c3939;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.info-box h2 {
+    color: #212020;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    color: #272525;
+    text-align: left;
+    font-weight: bold;
+}
+
+.info-box ul li {
+    margin: 5px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+.video-container {
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+/* FIN DE ESTILOS DE LOTES Y CONDOMINIOS */
+
+/* inicio de estilo del plano */
+
+.pdf-container {
+    margin-top: 20px;
+}
+
+.pdf-embed {
+    margin-bottom: 20px;
+    cursor: move;
+}
+
+.pdf-container h2 {
+    padding: 10px ;
+    margin: 15px 0px;
+    color: #292626;
+    background: #809c9f;
+}
+/* FIN DEL ESTILO DE PLANO */
+
+/* inicio del foter */
+
+
+footer{
+    background-color: #6e6e6e;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+footer p{
+    color: #fff;
+    width: 70vw;
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    width: 50px;
+
+}
+
+  /* fin del footer */
